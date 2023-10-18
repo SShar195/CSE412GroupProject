@@ -48,5 +48,105 @@
   "theaterId": "AACGT",
   "name": "AMC Ahwatukee 24",
   "streetAddress": " 4915 East Ray Rd., Phoenix, AZ 85044"
+ },
+ {
+  "theaterId": "AAECS",
+  "name": "AMC Arizona Center 24",
+  "streetAddress": " 565 North 3rd St., Phoenix, AZ 85004"
+ },
+ {
+  "theaterId": "AAECR",
+  "name": "AMC DINE-IN Esplanade 14",
+  "streetAddress": " 2515 E Camelback Rd., Phoenix, AZ 85016"
+ },
+ {
+  "theaterId": "AAUOH",
+  "name": "Harkins Christown 14",
+  "streetAddress": " 1620 West Montebello, Phoenix, AZ 85015"
+ },
+ {
+  "theaterId": "AAIHC",
+  "name": "Harkins Arizona Mills and IMAX",
+  "streetAddress": " 5000 Arizona Mills Circle, Tempe, AZ 85282"
+ },
+ {
+  "theaterId": "AAXFN",
+  "name": "AMC Centerpoint 11",
+  "streetAddress": " 730 S Mill Ave, Tempe, AZ 85281"
+ },
+ {
+  "theaterId": "AAIHD",
+  "name": "America Cinemas Phoenix",
+  "streetAddress": " 7611 W. Thomas Road Space G051, Phoenix, AZ 85033"
+ },
+ {
+  "theaterId": "AAXSW",
+  "name": "Harkins Camelview 14 at Fashion Square",
+  "streetAddress": " 7014 E Camelback Rd.  ANC-03A, Scottsdale, AZ 85251"
+ },
+ {
+  "theaterId": "AAYIF",
+  "name": "Majestic Tempe 7",
+  "streetAddress": " 1140 E Baseline Rd, Tempe, AZ 85283"
+ },
+ {
+  "theaterId": "AAUNR",
+  "name": "Harkins Tempe Marketplace 16",
+  "streetAddress": " 2000 E. Rio Salado Parkway, Tempe, AZ 85281"
+ },
+ {
+  "theaterId": "AACGT",
+  "name": "AMC Ahwatukee 24",
+  "streetAddress": " 4915 East Ray Rd., Phoenix, AZ 85044"
+ },
+ {
+  "theaterId": "AAECS",
+  "name": "AMC Arizona Center 24",
+  "streetAddress": " 565 North 3rd St., Phoenix, AZ 85004"
+ },
+ {
+  "theaterId": "AAECR",
+  "name": "AMC DINE-IN Esplanade 14",
+  "streetAddress": " 2515 E Camelback Rd., Phoenix, AZ 85016"
+ },
+ {
+  "theaterId": "AAUOH",
+  "name": "Harkins Christown 14",
+  "streetAddress": " 1620 West Montebello, Phoenix, AZ 85015"
+ },
+ {
+  "theaterId": "AAIHC",
+  "name": "Harkins Arizona Mills and IMAX",
+  "streetAddress": " 5000 Arizona Mills Circle, Tempe, AZ 85282"
+ },
+ {
+  "theaterId": "AAXFN",
+  "name": "AMC Centerpoint 11",
+  "streetAddress": " 730 S Mill Ave, Tempe, AZ 85281"
+ },
+ {
+  "theaterId": "AAIHD",
+  "name": "America Cinemas Phoenix",
+  "streetAddress": " 7611 W. Thomas Road Space G051, Phoenix, AZ 85033"
+ },
+ {
+  "theaterId": "AAXSW",
+  "name": "Harkins Camelview 14 at Fashion Square",
+  "streetAddress": " 7014 E Camelback Rd.  ANC-03A, Scottsdale, AZ 85251"
+ },
+ {
+  "theaterId": "AAYIF",
+  "name": "Majestic Tempe 7",
+  "streetAddress": " 1140 E Baseline Rd, Tempe, AZ 85283"
+ },
+ {
+  "theaterId": "AAUNR",
+  "name": "Harkins Tempe Marketplace 16",
+  "streetAddress": " 2000 E. Rio Salado Parkway, Tempe, AZ 85281"
+ },
+ {
+  "theaterId": "AACGT",
+  "name": "AMC Ahwatukee 24",
+  "streetAddress": " 4915 East Ray Rd., Phoenix, AZ 85044"
  }
 ]
