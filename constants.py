@@ -7,6 +7,12 @@ class Constants:
         4:"avondale, az", 
         5:"mesa, az", 
         6:"gilbert, az", 
-        7:"tucson, az"
+        7:"tucson, az", 
+        8:"tempe, az"
     }
     link = "https://www.fandango.com"
+    entitiesMap = {
+        0:"theater",
+        1:"movie", 
+        2:"ticket"
+    }

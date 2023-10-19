@@ -4,8 +4,7 @@ import time
 
 class API:
     @staticmethod
-    def getPageSource(driver, link:str) -> BeautifulSoup:
-        driver.get(link)
+    def getPageSource(driver) -> BeautifulSoup:
         time.sleep(1)
         pageSource = driver.page_source
         soup = BeautifulSoup(pageSource, "html.parser")

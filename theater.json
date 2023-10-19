@@ -90,16 +90,6 @@
   "streetAddress": " 9090 E. Indian Bend Road, Scottsdale, AZ 85250"
  },
  {
-  "theaterId": "AAECR",
-  "name": "AMC DINE-IN Esplanade 14",
-  "streetAddress": " 2515 E Camelback Rd., Phoenix, AZ 85016"
- },
- {
-  "theaterId": "AAUOH",
-  "name": "Harkins Christown 14",
-  "streetAddress": " 1620 West Montebello, Phoenix, AZ 85015"
- },
- {
   "theaterId": "AAPPP",
   "name": "Regal Gilbert",
   "streetAddress": " 1012 S Gilbert Rd, Gilbert, AZ 85296"
@@ -153,16 +143,6 @@
   "theaterId": "AAUFH",
   "name": "AMC Westgate 20",
   "streetAddress": " 9400 West Hanna Drive, Glendale, AZ 85308"
- },
- {
-  "theaterId": "AAIHD",
-  "name": "America Cinemas Phoenix",
-  "streetAddress": " 7611 W. Thomas Road Space G051, Phoenix, AZ 85033"
- },
- {
-  "theaterId": "AAUOH",
-  "name": "Harkins Christown 14",
-  "streetAddress": " 1620 West Montebello, Phoenix, AZ 85015"
  },
  {
   "theaterId": "AAUQQ",
@@ -185,44 +165,9 @@
   "streetAddress": " 10250 W. McDowell Road, Avondale, AZ 85392"
  },
  {
-  "theaterId": "AAECS",
-  "name": "AMC Arizona Center 24",
-  "streetAddress": " 565 North 3rd St., Phoenix, AZ 85004"
- },
- {
-  "theaterId": "AAECR",
-  "name": "AMC DINE-IN Esplanade 14",
-  "streetAddress": " 2515 E Camelback Rd., Phoenix, AZ 85016"
- },
- {
-  "theaterId": "AAKOT",
-  "name": "AMC Deer Valley 30",
-  "streetAddress": " 3033 West Agua Fria Fwy., Phoenix, AZ 85027"
- },
- {
   "theaterId": "AAXYM",
   "name": "Harkins Estrella Falls 16",
   "streetAddress": " 15010 West McDowell Rd, Goodyear, AZ 85395"
- },
- {
-  "theaterId": "AAQNN",
-  "name": "Harkins Gateway Pavilions 18",
-  "streetAddress": " 10250 W. McDowell Road, Avondale, AZ 85392"
- },
- {
-  "theaterId": "AAIHD",
-  "name": "America Cinemas Phoenix",
-  "streetAddress": " 7611 W. Thomas Road Space G051, Phoenix, AZ 85033"
- },
- {
-  "theaterId": "AAUFH",
-  "name": "AMC Westgate 20",
-  "streetAddress": " 9400 West Hanna Drive, Glendale, AZ 85308"
- },
- {
-  "theaterId": "AAUQQ",
-  "name": "Harkins Park West 14",
-  "streetAddress": " 9804 W. Northern Avenue, Peoria, AZ 85345"
  },
  {
   "theaterId": "AAUWE",
@@ -235,109 +180,14 @@
   "streetAddress": " 13100 N Prasada Pkwy, Surprise, AZ 85388"
  },
  {
-  "theaterId": "AAOSV",
-  "name": "Harkins Arrowhead Fountains 18",
-  "streetAddress": " 16046 North Arrowhead Fountain Center Drive, Peoria, AZ 85382"
- },
- {
-  "theaterId": "AANZT",
-  "name": "AMC Mesa Grand 14",
-  "streetAddress": " 1647 South Stapley, Mesa, AZ 85204"
- },
- {
   "theaterId": "AATZN",
   "name": "Cinemark Mesa 16",
   "streetAddress": " 1051 N. Dobson Rd., Mesa, AZ 85201"
  },
  {
-  "theaterId": "AAUNR",
-  "name": "Harkins Tempe Marketplace 16",
-  "streetAddress": " 2000 E. Rio Salado Parkway, Tempe, AZ 85281"
- },
- {
-  "theaterId": "AAXQV",
-  "name": "FatCats Gilbert Recline & Dine Cinema 6",
-  "streetAddress": " 4321 E. Baseline Dr., Gilbert, AZ 85234"
- },
- {
-  "theaterId": "AAPPP",
-  "name": "Regal Gilbert",
-  "streetAddress": " 1012 S Gilbert Rd, Gilbert, AZ 85296"
- },
- {
-  "theaterId": "AAYIF",
-  "name": "Majestic Tempe 7",
-  "streetAddress": " 1140 E Baseline Rd, Tempe, AZ 85283"
- },
- {
-  "theaterId": "AAXFN",
-  "name": "AMC Centerpoint 11",
-  "streetAddress": " 730 S Mill Ave, Tempe, AZ 85281"
- },
- {
   "theaterId": "AAYRO",
   "name": "FatCats Mesa",
   "streetAddress": " 5846 E Longbow Parkway, Mesa, AZ 85215"
- },
- {
-  "theaterId": "AAVII",
-  "name": "Picture Show at Superstition Springs Mall",
-  "streetAddress": " 6555 E. Southern Ave., Mesa, AZ 85206"
- },
- {
-  "theaterId": "AAYMU",
-  "name": "LOOK Cinemas - Chandler",
-  "streetAddress": " 1 West Chandler Blvd, Chandler, AZ 85225"
- },
- {
-  "theaterId": "AAPPP",
-  "name": "Regal Gilbert",
-  "streetAddress": " 1012 S Gilbert Rd, Gilbert, AZ 85296"
- },
- {
-  "theaterId": "AANZT",
-  "name": "AMC Mesa Grand 14",
-  "streetAddress": " 1647 South Stapley, Mesa, AZ 85204"
- },
- {
-  "theaterId": "AAXQV",
-  "name": "FatCats Gilbert Recline & Dine Cinema 6",
-  "streetAddress": " 4321 E. Baseline Dr., Gilbert, AZ 85234"
- },
- {
-  "theaterId": "AAUMZ",
-  "name": "Harkins SanTan Village 16",
-  "streetAddress": " 2298 E. Williams Field Rd., Gilbert, AZ 85295"
- },
- {
-  "theaterId": "AAYMU",
-  "name": "LOOK Cinemas - Chandler",
-  "streetAddress": " 1 West Chandler Blvd, Chandler, AZ 85225"
- },
- {
-  "theaterId": "AAUMY",
-  "name": "Harkins Chandler Crossroads Towne Center 12",
-  "streetAddress": " 2980 E. Germann Road, Chandler, AZ 85286"
- },
- {
-  "theaterId": "AAYPX",
-  "name": "Majestic Gilbert 8",
-  "streetAddress": " 5478 S Power Rd, Gilbert, AZ 85295"
- },
- {
-  "theaterId": "AAVII",
-  "name": "Picture Show at Superstition Springs Mall",
-  "streetAddress": " 6555 E. Southern Ave., Mesa, AZ 85206"
- },
- {
-  "theaterId": "AAISP",
-  "name": "Harkins Superstition Springs 25",
-  "streetAddress": " 6950 East Superstition Springs Boulevard, Mesa, AZ 85209"
- },
- {
-  "theaterId": "AAQAN",
-  "name": "Harkins Chandler Fashion 20",
-  "streetAddress": " 3159 W. Chandler Blvd., Chandler, AZ 85226"
  },
  {
   "theaterId": "AAPQI",
