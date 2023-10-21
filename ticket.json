@@ -1,8 +1,2072 @@
 [
-    {
-        "movieID":"",
-        "theaterID":"",
-        "showtime":"",
-        "isPreimuim":""
-    }
+ {
+  "movieID": "231976",
+  "theaterID": "AAECS",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAECS",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAECS",
+  "showtime": "18:35",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAECS",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAECS",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAECS",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AAECS",
+  "showtime": "23:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "185727",
+  "theaterID": "AAECR",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAECR",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAECR",
+  "showtime": "19:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAECR",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAECR",
+  "showtime": "22:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233462",
+  "theaterID": "AAECR",
+  "showtime": "17:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAUOH",
+  "showtime": "08:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AAUOH",
+  "showtime": "20:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAUOH",
+  "showtime": "11:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAUOH",
+  "showtime": "11:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAUOH",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAUOH",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAUOH",
+  "showtime": "16:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAUOH",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAUOH",
+  "showtime": "07:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAIHC",
+  "showtime": "12:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAIHC",
+  "showtime": "15:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAIHC",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAIHC",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAIHC",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAIHC",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAIHC",
+  "showtime": "22:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAIHC",
+  "showtime": "14:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "50896",
+  "theaterID": "AAXFN",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAXFN",
+  "showtime": "17:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232024",
+  "theaterID": "AAXFN",
+  "showtime": "20:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAXFN",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231976",
+  "theaterID": "AAXFN",
+  "showtime": "21:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAXFN",
+  "showtime": "07:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAIHD",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAIHD",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAIHD",
+  "showtime": "22:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAIHD",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAIHD",
+  "showtime": "09:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAIHD",
+  "showtime": "22:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAIHD",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAIHD",
+  "showtime": "12:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAIHD",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAXSW",
+  "showtime": "22:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAXSW",
+  "showtime": "22:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAXSW",
+  "showtime": "21:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAXSW",
+  "showtime": "23:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAXSW",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAXSW",
+  "showtime": "23:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAXSW",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233473",
+  "theaterID": "AAXSW",
+  "showtime": "21:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAXSW",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAYIF",
+  "showtime": "12:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233462",
+  "theaterID": "AAYIF",
+  "showtime": "12:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAYIF",
+  "showtime": "21:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAYIF",
+  "showtime": "09:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAYIF",
+  "showtime": "08:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAYIF",
+  "showtime": "12:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAYIF",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAYIF",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAUNR",
+  "showtime": "08:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAUNR",
+  "showtime": "12:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAUNR",
+  "showtime": "09:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAUNR",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAUNR",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAUNR",
+  "showtime": "15:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAUNR",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAUNR",
+  "showtime": "20:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAUNR",
+  "showtime": "11:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAUNR",
+  "showtime": "09:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AACGT",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AACGT",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AACGT",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AACGT",
+  "showtime": "19:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233633",
+  "theaterID": "AACGT",
+  "showtime": "22:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233347",
+  "theaterID": "AACGT",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AACGT",
+  "showtime": "20:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232701",
+  "theaterID": "AAPGJ",
+  "showtime": "15:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAPGJ",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAPGJ",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAPGJ",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAPGJ",
+  "showtime": "15:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233473",
+  "theaterID": "AAPGJ",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAPGJ",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAQZJ",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAQZJ",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAQZJ",
+  "showtime": "21:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAQZJ",
+  "showtime": "14:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAQZJ",
+  "showtime": "09:40",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAQZJ",
+  "showtime": "08:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAQZJ",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAQZJ",
+  "showtime": "21:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAQZJ",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233462",
+  "theaterID": "AAQZJ",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAQZJ",
+  "showtime": "12:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227748",
+  "theaterID": "AAWHD",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "50896",
+  "theaterID": "AAWHD",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233634",
+  "theaterID": "AAWHD",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAWHD",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAWHD",
+  "showtime": "15:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233634",
+  "theaterID": "AAWHD",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAWNG",
+  "showtime": "14:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AAWNG",
+  "showtime": "20:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAWNG",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233634",
+  "theaterID": "AAWNG",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAWNG",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAWNG",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAWNG",
+  "showtime": "12:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AAWNG",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAWNG",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAUVH",
+  "showtime": "08:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232271",
+  "theaterID": "AAUVH",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAUVH",
+  "showtime": "15:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAUVH",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAUVH",
+  "showtime": "19:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231976",
+  "theaterID": "AAKOT",
+  "showtime": "23:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233634",
+  "theaterID": "AAKOT",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAKOT",
+  "showtime": "14:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAKOT",
+  "showtime": "14:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233530",
+  "theaterID": "AAKOT",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAKOT",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232271",
+  "theaterID": "AACXS",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AACXS",
+  "showtime": "15:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AACXS",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AACXS",
+  "showtime": "22:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "199151",
+  "theaterID": "AACXS",
+  "showtime": "22:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AACXS",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AACXS",
+  "showtime": "21:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AACXS",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAXWK",
+  "showtime": "07:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAXWK",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAXWK",
+  "showtime": "19:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAXWK",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "185727",
+  "theaterID": "AAXWK",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232024",
+  "theaterID": "AAPPP",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAPPP",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAPPP",
+  "showtime": "08:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AAPPP",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAPPP",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227748",
+  "theaterID": "AANZT",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AANZT",
+  "showtime": "07:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AANZT",
+  "showtime": "14:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AANZT",
+  "showtime": "11:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AANZT",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AANZT",
+  "showtime": "16:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AANZT",
+  "showtime": "20:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233633",
+  "theaterID": "AANZT",
+  "showtime": "07:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AANZT",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AANZT",
+  "showtime": "22:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232271",
+  "theaterID": "AAXQV",
+  "showtime": "20:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAXQV",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAXQV",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAXQV",
+  "showtime": "09:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAXQV",
+  "showtime": "22:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233633",
+  "theaterID": "AAXQV",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAXQV",
+  "showtime": "17:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAXQV",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAXQV",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAXQV",
+  "showtime": "22:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232271",
+  "theaterID": "AAUMZ",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AAUMZ",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAUMZ",
+  "showtime": "12:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAUMZ",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAUMZ",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAUMZ",
+  "showtime": "07:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232271",
+  "theaterID": "AAUMZ",
+  "showtime": "07:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAUMZ",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAUMZ",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAUMZ",
+  "showtime": "07:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233462",
+  "theaterID": "AAYMU",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAYMU",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAYMU",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAYMU",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AAYMU",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AAUMY",
+  "showtime": "10:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAUMY",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAUMY",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAUMY",
+  "showtime": "17:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAUMY",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAYPX",
+  "showtime": "14:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAYPX",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAYPX",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAYPX",
+  "showtime": "20:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAYPX",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231997",
+  "theaterID": "AAYPX",
+  "showtime": "08:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AAYPX",
+  "showtime": "15:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAYPX",
+  "showtime": "08:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAVII",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAVII",
+  "showtime": "10:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAVII",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAVII",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232701",
+  "theaterID": "AAVII",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAVII",
+  "showtime": "17:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232024",
+  "theaterID": "AAISP",
+  "showtime": "15:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAISP",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAISP",
+  "showtime": "09:40",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAISP",
+  "showtime": "20:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233530",
+  "theaterID": "AAISP",
+  "showtime": "21:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAISP",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAQAN",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAQAN",
+  "showtime": "22:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232024",
+  "theaterID": "AAQAN",
+  "showtime": "14:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAQAN",
+  "showtime": "18:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "199151",
+  "theaterID": "AAQAN",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAQAN",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAQAN",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AAQAN",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAUFH",
+  "showtime": "13:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAUFH",
+  "showtime": "23:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231976",
+  "theaterID": "AAUFH",
+  "showtime": "15:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAUFH",
+  "showtime": "12:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAUFH",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAUFH",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAUFH",
+  "showtime": "18:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "99112",
+  "theaterID": "AAUFH",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAUFH",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231120",
+  "theaterID": "AAUFH",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233473",
+  "theaterID": "AAUFH",
+  "showtime": "14:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232218",
+  "theaterID": "AAUQQ",
+  "showtime": "17:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231976",
+  "theaterID": "AAUQQ",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAUQQ",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAUQQ",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAUQQ",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAOSV",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAOSV",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAOSV",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAOSV",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232898",
+  "theaterID": "AAOSV",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAOSV",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAOSV",
+  "showtime": "12:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAOSV",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAOSV",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AACDF",
+  "showtime": "08:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AACDF",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AACDF",
+  "showtime": "13:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233347",
+  "theaterID": "AACDF",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AACDF",
+  "showtime": "09:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231120",
+  "theaterID": "AACDF",
+  "showtime": "21:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233347",
+  "theaterID": "AACDF",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAQNN",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAQNN",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAQNN",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232282",
+  "theaterID": "AAQNN",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231120",
+  "theaterID": "AAQNN",
+  "showtime": "15:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAQNN",
+  "showtime": "20:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAQNN",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAXYM",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232014",
+  "theaterID": "AAXYM",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233759",
+  "theaterID": "AAXYM",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233530",
+  "theaterID": "AAXYM",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAXYM",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAXYM",
+  "showtime": "13:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231976",
+  "theaterID": "AAXYM",
+  "showtime": "09:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAXYM",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAUWE",
+  "showtime": "14:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAUWE",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232154",
+  "theaterID": "AAUWE",
+  "showtime": "12:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAUWE",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAUWE",
+  "showtime": "18:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAUWE",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAUWE",
+  "showtime": "07:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAYXS",
+  "showtime": "18:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AAYXS",
+  "showtime": "07:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAYXS",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAYXS",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAYXS",
+  "showtime": "23:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAYXS",
+  "showtime": "08:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232141",
+  "theaterID": "AAYXS",
+  "showtime": "09:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AAYXS",
+  "showtime": "16:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAYXS",
+  "showtime": "10:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAYXS",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAYXS",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AATZN",
+  "showtime": "07:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AATZN",
+  "showtime": "09:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AATZN",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233633",
+  "theaterID": "AATZN",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AATZN",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232701",
+  "theaterID": "AAYRO",
+  "showtime": "23:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAYRO",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227748",
+  "theaterID": "AAYRO",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227532",
+  "theaterID": "AAYRO",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233807",
+  "theaterID": "AAYRO",
+  "showtime": "17:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AAYRO",
+  "showtime": "22:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAYRO",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AAYRO",
+  "showtime": "08:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232024",
+  "theaterID": "AAYRO",
+  "showtime": "22:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231120",
+  "theaterID": "AAYRO",
+  "showtime": "17:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAPQI",
+  "showtime": "19:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAPQI",
+  "showtime": "09:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAPQI",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAPQI",
+  "showtime": "15:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AAPQI",
+  "showtime": "19:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "185727",
+  "theaterID": "AAPQI",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAPQI",
+  "showtime": "17:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233530",
+  "theaterID": "AAXZU",
+  "showtime": "07:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAXZU",
+  "showtime": "21:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AAXZU",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "230575",
+  "theaterID": "AAXZU",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAXZU",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232730",
+  "theaterID": "AAXZU",
+  "showtime": "20:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAXZU",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAXZU",
+  "showtime": "09:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAXZU",
+  "showtime": "17:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AANGB",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231714",
+  "theaterID": "AANGB",
+  "showtime": "20:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AANGB",
+  "showtime": "16:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231059",
+  "theaterID": "AANGB",
+  "showtime": "17:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AANGB",
+  "showtime": "10:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AANGB",
+  "showtime": "16:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AANGB",
+  "showtime": "12:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227748",
+  "theaterID": "AANGB",
+  "showtime": "17:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233861",
+  "theaterID": "AANGB",
+  "showtime": "09:40",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAMPB",
+  "showtime": "13:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "2023",
+  "theaterID": "AAMPB",
+  "showtime": "20:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAMPB",
+  "showtime": "20:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAMPB",
+  "showtime": "20:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAMPB",
+  "showtime": "22:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "185727",
+  "theaterID": "AAMPB",
+  "showtime": "13:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232432",
+  "theaterID": "AAXJI",
+  "showtime": "21:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233473",
+  "theaterID": "AAXJI",
+  "showtime": "15:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "216918",
+  "theaterID": "AAXJI",
+  "showtime": "10:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232577",
+  "theaterID": "AAXJI",
+  "showtime": "10:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233549",
+  "theaterID": "AAXJI",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232580",
+  "theaterID": "AAXJI",
+  "showtime": "19:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "50896",
+  "theaterID": "AAXJI",
+  "showtime": "11:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231675",
+  "theaterID": "AAXJI",
+  "showtime": "22:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "199151",
+  "theaterID": "AAXJI",
+  "showtime": "10:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232097",
+  "theaterID": "AAXJI",
+  "showtime": "18:45",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231120",
+  "theaterID": "AAUVM",
+  "showtime": "18:35",
+  "isPremium": ""
+ },
+ {
+  "movieID": "232297",
+  "theaterID": "AAUVM",
+  "showtime": "21:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233161",
+  "theaterID": "AAUVM",
+  "showtime": "18:20",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233197",
+  "theaterID": "AAUVM",
+  "showtime": "08:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "227748",
+  "theaterID": "AAUVM",
+  "showtime": "18:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231938",
+  "theaterID": "AAUVM",
+  "showtime": "21:00",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233881",
+  "theaterID": "AAUVM",
+  "showtime": "12:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "185727",
+  "theaterID": "AAAYI",
+  "showtime": "16:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "23292",
+  "theaterID": "AAAYI",
+  "showtime": "17:50",
+  "isPremium": ""
+ },
+ {
+  "movieID": "231534",
+  "theaterID": "AAAYI",
+  "showtime": "23:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233414",
+  "theaterID": "AAAYI",
+  "showtime": "18:30",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233893",
+  "theaterID": "AAAYI",
+  "showtime": "11:55",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233462",
+  "theaterID": "AAAYI",
+  "showtime": "08:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233347",
+  "theaterID": "AAAYI",
+  "showtime": "12:15",
+  "isPremium": ""
+ },
+ {
+  "movieID": "233341",
+  "theaterID": "AAAYI",
+  "showtime": "23:45",
+  "isPremium": ""
+ }
 ]

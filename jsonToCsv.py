@@ -4,32 +4,35 @@ from constants import Constants
 import psycopg2
 import os
 
-with open('theater.json', 'r') as json_file:
-    Theaters = json.load(json_file)
+# connect = psycopg2.connect(host='localhost', database='CSE412GroupProject', user='user', password='password')
+# cursor = connect.cursor()
+# sql = '''
+# CREATE TABLE theater(theaterId char[] NOT NULL,\
+# name char[],\
+# streetAddress char[]);
+# '''
+# cursor.execute(sql)
 
-file = open('theater.csv', 'w', newline = '')
-csvWriter = csv.writer(file, delimiter="|")
+# with open('theater.csv', 'r') as csv_file:
+#     next(csv_file)
+#     cursor.copy_from(csv_file, 'theater', sep='|')
+# connect.commit()
+# Automated Table Creation and Importing
 
-count = 0
-for i in Theaters:
-    if count == 0:
-        header = i.keys()
-        csvWriter.writerow(header)
-        count += 1
-    csvWriter.writerow(i.values())
+class JsonToCSV:
+    @staticmethod
+    def csvify(filename):
+        with open(f'{filename}.json', 'r') as json_file:
+            List = json.load(json_file)
 
-file.close()
+        file = open(f'{filename}.csv', 'w', newline = '')
+        csvWriter = csv.writer(file, delimiter="|")
 
-connect = psycopg2.connect(host='localhost', database='CSE412GroupProject', user='user', password='password')
-cursor = connect.cursor()
-sql = '''
-CREATE TABLE theater(theaterId char[] NOT NULL,\
-name char[],\
-streetAddress char[]);
-'''
-cursor.execute(sql)
-
-with open('theater.csv', 'r') as csv_file:
-    next(csv_file)
-    cursor.copy_from(csv_file, 'theater', sep='|')
-connect.commit()
+        count = 0
+        for i in List:
+            if count == 0:
+                header = i.keys()
+                csvWriter.writerow(header)
+                count += 1
+            csvWriter.writerow(i.values())
+        file.close()
