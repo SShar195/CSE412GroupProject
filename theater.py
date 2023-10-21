@@ -46,7 +46,9 @@ class Theater:
 
         # theater page
         soup = API.getPageSource(driver)
-        ulTag = soup.find(class_="fd-showtimes js-theaterShowtimes-loading").find_all("li", class_="fd-theater")
-        getTheaters(ulTag)
+        liTag = soup.find(class_="fd-showtimes js-theaterShowtimes-loading").find_all("li", class_="fd-theater")
+        print(liTag)
+        print("---------------------------")
+        getTheaters(liTag)
     
             
