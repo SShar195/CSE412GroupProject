@@ -17,15 +17,16 @@ ticketTimes = ['07:00', '07:15', '07:30', '07:45',
             "15:00", "15:15", "15:30", "15:45",
             "16:00", "16:15", "16:30", "16:45",
             "17:00", "17:15",'17:20', "17:30", 
-            "17:45", "17:50",
-            "18:00", "18:15", '18:20', "18:30", 
-            '18:35', "18:45",
+            "17:45", "17:50","18:00", "18:15", 
+            '18:20', "18:30", '18:35', "18:45",
             "19:00", "19:15", "19:30", "19:45",
             "20:00", "20:15", "20:30", "20:45",
             "21:00", "21:15", "21:30", "21:45",
             "22:00", "22:15", "22:30", "22:45",
             "23:00", "23:15", "23:30", "23:45"
             ]
+ticketRows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
+ticketColumn = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16']
 
 
 
@@ -58,15 +59,21 @@ def weeklyTickets():
         Tickets = json.load(json_file)
 
     for theater in Theaters:
-        for i in range(1, random.randint(6, 12)):
-            data = {
-                "movieID": random.choice(Movies)['movieID'],
-                "theaterID":theater['theaterId'],
-                "showtime":random.choice(ticketTimes),
-                "isPremium":""
-            }
-            Tickets.append(data)
-    
+        for i in range(1, 7):
+            showtime =  random.choice(ticketTimes)
+            for row in ticketRows:
+                for column in ticketColumn:
+                    if ticketTimes.index(showtime) < 44:
+                        isMatinee = True
+                    else: isMatinee = False
+                    data = {
+                        "movieID": random.choice(Movies)['movieID'],
+                        "theaterID": theater['theaterId'],
+                        "showtime": showtime,
+                        "seat": row + column,
+                        "isMatinee": isMatinee
+                    }
+                    Tickets.append(data)
     with open('ticket.json', 'w') as json_file:
         json.dump(Tickets, json_file, indent=1)
     pass
