@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Database</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h1>Movie Database</h1>
+
+    <div id="movies"></div>
+    <div id="theaters"></div>
+    <div id="tickets"></div>
+
+    <script>
+        // Use D3.js to load CSV files and display data
+
+        // Use D3.js to load movie.csv
+        d3.csv('movie.csv').then(function(movieData) {
+            // Process movie data and display
+            // Example: Display movie titles in #movies div
+            let moviesDiv = d3.select('#movies');
+            moviesDiv.selectAll('p')
+                .data(movieData)
+                .enter()
+                .append('p')
+                .text(function(d) {
+                    return d.title;
+                });
+            console.log("Movie Data: ", movieData);
+        });
+
+        // Load theater.csv and display theater information
+        d3.csv('theater.csv').then(function(theaterData) {
+            // Process theater data and display
+            let theatersDiv = d3.select('#theaters');
+            theatersDiv.selectAll('p')
+                .data(theaterData)
+                .enter()
+                .append('p')
+                .text(function(d) {
+                    return d.name;
+                });
+            console.log("Theater Data: ", theaterData);
+        });
+        
+        // Load ticket.csv and display ticket information
+        d3.csv('ticket.csv').then(function(ticketData) {
+            // Process ticket data and display
+            /*let ticketsDiv = d3.select('#tickets');
+            ticketsDiv.selectAll('p')
+                .data(ticketData)
+                .enter()
+                .append('p')
+                .text(function(d) {
+                    return d.seat;
+                });*/
+            console.log("Ticket Data: ", ticketData);
+        });
+
+    </script>
+
+</body>
+</html>
