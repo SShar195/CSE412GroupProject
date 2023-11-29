@@ -24,83 +24,33 @@
     <h1 class="text-center">CSE412 Movie Database</h1>
     <h3 class="text-center">Tyler Morgan, Sahil Sharma, Colton Hart, Jared Riley</h3>
 
-    <svg id="movie-svg"></svg>
-
     <div id="movies"></div>
     <div id="theaters"></div>
     <div id="tickets"></div>
 
-    <script>
-        // Use D3.js to load CSV files and display data
+    <ul id="movie-list"></ul> <!-- Use an unordered list for movie links -->
 
+    <script>
         // Use D3.js to load movie.csv
         d3.csv('movie.csv').then(function(movieData) {
-            // Process movie data and display
-            // Example: Display movie titles in #movies div
-            // let moviesDiv = d3.select('#movies');
-            // moviesDiv.selectAll('p')
-            //     .data(movieData)
-            //     .enter()
-            //     .append('p')
-            //     .text(function(d) {
-            //         return d.title;
-            //     });
-            // Access the SVG element
-            const svg = d3.select('#movie-svg');
+            console.log("Movie Titles: ", movieData);
 
-            const margin = {top: 20, right: 20, bottom: 20, left: 20};
-            const width = 1750 - margin.left - margin.right;
-            const height = 1100 - margin.top - margin.bottom;
+            // Select the movie list element
+            const movieList = d3.select('#movie-list');
 
-            // Append a group element to the SVG
-            const g = svg.append('g')
-                .attr('transform', `translate(${margin.left},${margin.top})`);
-
-            // Display movie titles in the SVG
-            const movies = g.selectAll('text')
+            // Generate links for each movie and append them to the movie list
+            movieList.selectAll('li')
                 .data(movieData)
                 .enter()
-                .append('text')
-                .attr('x', 10)
-                .attr('y', (d, i) => 20 * i) // Display each movie title with some vertical spacing
-                .text(d => d.title)
-                .attr('fill', 'black');
-
-            // Adjust SVG dimensions
-            svg.attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom);
-
-            console.log("Movie Data: ", movieData);
-        });
-
-        // Load theater.csv and display theater information
-        d3.csv('theater.csv').then(function(theaterData) {
-            // Process theater data and display
-            // let theatersDiv = d3.select('#theaters');
-            // theatersDiv.selectAll('p')
-            //     .data(theaterData)
-            //     .enter()
-            //     .append('p')
-            //     .text(function(d) {
-            //         return d.name;
-            //     });
-            console.log("Theater Data: ", theaterData);
-        });
-        
-        // Load ticket.csv and display ticket information
-        d3.csv('ticket.csv').then(function(ticketData) {
-            // Process ticket data and display
-            /*let ticketsDiv = d3.select('#tickets');
-            ticketsDiv.selectAll('p')
-                .data(ticketData)
-                .enter()
-                .append('p')
+                .append('li')
+                .append('a')
+                .attr('href', function(d) {
+                    return 'movie_info.html?movie_id=' + d.movieID; // Adjust the URL structure as needed
+                })
                 .text(function(d) {
-                    return d.seat;
-                });*/
-            console.log("Ticket Data: ", ticketData);
+                    return d.title; // Assuming 'title' is a column in movie.csv
+                });
         });
-
     </script>
 
 </body>
