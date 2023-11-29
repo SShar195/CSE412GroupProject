@@ -5,12 +5,26 @@
     <title>Movie Database</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        
+        .text-center {
+            text-align: center;
+        }
+
+        svg {
+            border: 1px solid black;
+        }
+
+        text {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Movie Database</h1>
+    <h1 class="text-center">CSE412 Movie Database</h1>
+    <h3 class="text-center">Tyler Morgan, Sahil Sharma, Colton Hart, Jared Riley</h3>
+
+    <svg id="movie-svg"></svg>
 
     <div id="movies"></div>
     <div id="theaters"></div>
@@ -23,28 +37,53 @@
         d3.csv('movie.csv').then(function(movieData) {
             // Process movie data and display
             // Example: Display movie titles in #movies div
-            let moviesDiv = d3.select('#movies');
-            moviesDiv.selectAll('p')
+            // let moviesDiv = d3.select('#movies');
+            // moviesDiv.selectAll('p')
+            //     .data(movieData)
+            //     .enter()
+            //     .append('p')
+            //     .text(function(d) {
+            //         return d.title;
+            //     });
+            // Access the SVG element
+            const svg = d3.select('#movie-svg');
+
+            const margin = {top: 20, right: 20, bottom: 20, left: 20};
+            const width = 1750 - margin.left - margin.right;
+            const height = 1100 - margin.top - margin.bottom;
+
+            // Append a group element to the SVG
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Display movie titles in the SVG
+            const movies = g.selectAll('text')
                 .data(movieData)
                 .enter()
-                .append('p')
-                .text(function(d) {
-                    return d.title;
-                });
+                .append('text')
+                .attr('x', 10)
+                .attr('y', (d, i) => 20 * i) // Display each movie title with some vertical spacing
+                .text(d => d.title)
+                .attr('fill', 'black');
+
+            // Adjust SVG dimensions
+            svg.attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom);
+
             console.log("Movie Data: ", movieData);
         });
 
         // Load theater.csv and display theater information
         d3.csv('theater.csv').then(function(theaterData) {
             // Process theater data and display
-            let theatersDiv = d3.select('#theaters');
-            theatersDiv.selectAll('p')
-                .data(theaterData)
-                .enter()
-                .append('p')
-                .text(function(d) {
-                    return d.name;
-                });
+            // let theatersDiv = d3.select('#theaters');
+            // theatersDiv.selectAll('p')
+            //     .data(theaterData)
+            //     .enter()
+            //     .append('p')
+            //     .text(function(d) {
+            //         return d.name;
+            //     });
             console.log("Theater Data: ", theaterData);
         });
         
