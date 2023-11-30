@@ -27,7 +27,39 @@ ticketTimes = ['07:00', '07:15', '07:30', '07:45',
             ]
 ticketRows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
 ticketColumn = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16']
+averagePriceMap = {
+    "AMC": "$16.50",
+    "LOOK": "$16.00",
+    "Harkins": "$16.50",
+    "Majestic": "$16.00",
+    "Cinemark": "$16.50",
+    "FatCats": "$16.00",
+    "Landmark": "$17.00",
+    "Majestic": "$16.00",
+    "Picture": "$16.50",
+    "Regal": "$16.50",
+    "RoadHouse": "$16.00",
+    "The": "$17.00",
+    "Touchstar": "$16.50",
+    "America": "$18.00"
+}
 
+averageMatineePriceMap = {
+    "AMC": "$12.50",
+    "LOOK": "$12.00",
+    "Harkins": "$12.50",
+    "Majestic": "$12.00",
+    "Cinemark": "$12.50",
+    "FatCats": "$12.00",
+    "Landmark": "$13.00",
+    "Majestic": "$12.00",
+    "Picture": "$12.50",
+    "Regal": "$12.50",
+    "RoadHouse": "$12.00",
+    "The": "$13.00",
+    "Touchstar": "$12.50",
+    "America": "$14.00"
+}
 
 
 # Creates link used in create_tickets
@@ -66,12 +98,18 @@ def weeklyTickets():
                     if ticketTimes.index(showtime) < 44:
                         isMatinee = True
                     else: isMatinee = False
+
+                    if isMatinee:
+                        price = averageMatineePriceMap[theater['name'][:theater['name'].index(" ")]]
+                    else:
+                        price = averagePriceMap[theater['name'][:theater['name'].index(" ")]]
                     data = {
                         "movieID": random.choice(Movies)['movieID'],
                         "theaterID": theater['theaterId'],
                         "showtime": showtime,
                         "seat": row + column,
-                        "isMatinee": isMatinee
+                        "isMatinee": isMatinee,
+                        "price": price
                     }
                     Tickets.append(data)
     with open('ticket.json', 'w') as json_file:
