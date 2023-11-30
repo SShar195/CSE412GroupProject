@@ -31,20 +31,34 @@ class Theater:
                 with open('theater.json', 'w') as json_file:
                     json.dump(Theaters, json_file, indent=1)
 
-    driver = API.getDriver()
-    driver.get(Constants.link)
-    for i in Constants.theaterLinkMap.values():
-        elem = driver.find_element(By.ID, "global-header-search-input")
-        elem.click()
-        elem.send_keys(i)
-        elem2 = driver.find_element(By.CLASS_NAME, "nav-bar__go-btn")
-        elem2.click()
 
-        # cities page
-        elem3 = driver.find_element(By.XPATH, "//*[@id='search-results-cities']/div/div/div/ul/li/a")
-        elem3.click()
+    
+    def sortTheaters():
+        def func(e):
+            return e['name']
+    
+        with open("theater.json", "r") as json_file:
+            data = json.load(json_file)
+        data.sort(key=func)
 
-        # theater page
-        soup = API.getPageSource(driver)
-        ulTag = soup.find(class_="fd-showtimes js-theaterShowtimes-loading").find_all("li", class_="fd-theater")
-        getTheaters(ulTag)
+        with open("theater.json", "w") as json_file:
+            json.dump(data, json_file, indent = 1)
+
+    # driver = API.getDriver()
+    # driver.get(Constants.link)
+    # for i in Constants.theaterLinkMap.values():
+    #     elem = driver.find_element(By.ID, "global-header-search-input")
+    #     elem.click()
+    #     elem.send_keys(i)
+    #     elem2 = driver.find_element(By.CLASS_NAME, "nav-bar__go-btn")
+    #     elem2.click()
+
+    #     # cities page
+    #     elem3 = driver.find_element(By.XPATH, "//*[@id='search-results-cities']/div/div/div/ul/li/a")
+    #     elem3.click()
+
+    #     # theater page
+    #     soup = API.getPageSource(driver)
+    #     ulTag = soup.find(class_="fd-showtimes js-theaterShowtimes-loading").find_all("li", class_="fd-theater")
+    #     getTheaters(ulTag)
+    sortTheaters()

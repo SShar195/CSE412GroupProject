@@ -26,7 +26,7 @@ class JsonToCSV:
             List = json.load(json_file)
 
         file = open(f'{filename}.csv', 'w', newline = '')
-        csvWriter = csv.writer(file, delimiter="|")
+        csvWriter = csv.writer(file, delimiter=";")
 
         count = 0
         for i in List:
