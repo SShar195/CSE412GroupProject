@@ -115,7 +115,7 @@
         const movieID = urlParams.get('movie_id');
 
         // Use D3.js to load movie data
-        d3.csv('/templates/movie.csv').then(function(movieData) {
+        d3.csv('/static/movie.csv').then(function(movieData) {
             // Find the movie information based on movieID
             const selectedMovie = movieData.find(movie => movie.movieID === movieID);
 
@@ -132,14 +132,14 @@
             `;
 
             // Use D3.js to load ticket data
-            d3.csv('/templates/ticket.csv').then(function(ticketData) {
+            d3.csv('/static/ticket.csv').then(function(ticketData) {
                 // Filter tickets based on movieID to find theaters showing the movie
                 const theatersForMovie = ticketData
                     .filter(ticket => ticket.movieID === movieID)
                     .map(ticket => ticket.theaterID);
 
                 // Use the found theaterIDs to fetch theater information
-                d3.csv('/templates/theater.csv').then(function(theaterData) {
+                d3.csv('/static/theater.csv').then(function(theaterData) {
                     // Filter theaters based on theaterIDs associated with the movie
                     theatersShowingMovie = theaterData.filter(theater =>
                         theatersForMovie.includes(theater.theaterID)

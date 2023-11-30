@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import requests
 import psycopg2
 import os
+import csv
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -55,9 +56,10 @@ with open('movie.csv', 'r') as f:
     cursor.copy_from(f, 'movie', sep=';')
 
 connection.commit()
+
 @app.route('/')
 def homepage():
-    return render_template('homepage.html')
+    return render_template(r'homepage.html')
 
 @app.route('/movie_info.html')
 def movie_info():
