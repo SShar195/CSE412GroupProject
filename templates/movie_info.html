@@ -34,23 +34,76 @@
             font-size: 18px;
             line-height: 1.6;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-        /* Additional styling for specific elements */
-        /* Customize as needed */
-        /* For example: */
-        /* #movie-title {
-            font-size: 28px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        } */
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
     <h1 class="text-center" id="movie-title"></h1>
     <div id="movie-details"></div>
+    <div>
+        <button onclick="sortByTheaterName()">Sort by Theater Name</button>
+        <button onclick="sortByAddress()">Sort by Address</button>
+    </div>
+    <table id="theater-table"></table>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
+        let theatersShowingMovie = []; // Store theaters for sorting
+
+        // Function to populate the theater table
+        function populateTheaterTable(theaters) {
+            const theaterTable = document.getElementById('theater-table');
+            theaterTable.innerHTML = `
+                <caption>Theaters Showing the Movie</caption>
+                <thead>
+                    <tr>
+                        <th>Theater Name</th>
+                        <th>Address</th>
+                        <!-- Add more headers if needed -->
+                    </tr>
+                </thead>
+                <tbody>
+                    ${theaters.map(theater => `
+                        <tr>
+                            <td>${theater.name}</td>
+                            <td>${theater.StreetAddress}</td>
+                            <!-- Add more columns if needed -->
+                        </tr>
+                    `).join('')}
+                </tbody>
+            `;
+        }
+
+        // Function to sort theaters by name and update the table
+        function sortByTheaterName() {
+            theatersShowingMovie.sort((a, b) => a.name.localeCompare(b.name));
+            populateTheaterTable(theatersShowingMovie);
+        }
+
+        // Function to sort theaters by address and update the table
+        function sortByAddress() {
+            theatersShowingMovie.sort((a, b) => a.StreetAddress.localeCompare(b.StreetAddress));
+            populateTheaterTable(theatersShowingMovie);
+        }
+
         // Retrieve movie ID from URL query parameter
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -72,6 +125,58 @@
                 <p>Title: ${selectedMovie.title}</p>
                 <!-- Add more details as needed -->
             `;
+
+            // Use D3.js to load ticket data
+            d3.csv('/templates/ticket.csv').then(function(ticketData) {
+                // Filter tickets based on movieID to find theaters showing the movie
+                const theatersForMovie = ticketData
+                    .filter(ticket => ticket.movieID === movieID)
+                    .map(ticket => ticket.theaterID);
+
+                // Use the found theaterIDs to fetch theater information
+                d3.csv('/templates/theater.csv').then(function(theaterData) {
+                    // Filter theaters based on theaterIDs associated with the movie
+                    theatersShowingMovie = theaterData.filter(theater =>
+                        theatersForMovie.includes(theater.theaterID)
+                    );
+
+                    // Create and populate the theater table
+                    const theaterTable = document.getElementById('theater-table');
+                    theaterTable.innerHTML = `
+                        <caption>Theaters Showing the Movie</caption>
+                        <thead>
+                            <tr>
+                                <th>Theater Name</th>
+                                <th>Address</th>
+                                <!-- Add more headers if needed -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${theatersShowingMovie.map(theater => `
+                                <tr>
+                                    <td>${theater.name}</td>
+                                    <td>${theater.StreetAddress}</td>
+                                    <!-- Add more columns if needed -->
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    `;
+
+                    //// Display ticket information
+                    //const ticketInfo = document.getElementById('ticket-info');
+                    //ticketInfo.innerHTML = '<h2>Tickets for the Movie:</h2>';
+                    //const ticketsForMovie = ticketData.filter(ticket => ticket.movieID === movieID);
+                    //ticketsForMovie.forEach(ticket => {
+                    //    ticketInfo.innerHTML += `
+                    //        <p>Showtime: ${ticket.showtime}</p>
+                    //        <p>Seat: ${ticket.seat}</p>
+                    //        <p>Is Matinee: ${ticket.isMatinee}</p>
+                    //        <!-- Add more ticket details if needed -->
+                    //    `;
+                    //});
+                });
+            });
+
         });
     </script>
 </body>
