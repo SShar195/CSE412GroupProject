@@ -21,7 +21,7 @@
             align-self: center;
         }
 
-         #movie-list{
+        #movie-list{
             display: grid;
             justify-self: center;
             justify-items: center;
@@ -112,9 +112,14 @@
                 .attr('href', function(d) {
                     return 'movie_info.html?movie_id=' + d.movieID; // Adjust the URL structure as needed
                 })
-                .text(function(d) {
-                    return d.title; // Assuming 'title' is a column in movie.csv
+                .append('img')
+                .attr('src', function (d) {
+                    return '/static/dbposters/[movieid].jpg'.replace('[movieid]', d.movieID); // Dynamically set image source
+                })
+                .attr('alt', function (d) {
+                    return d.title;
                 });
+                
 
         });
     </script>
