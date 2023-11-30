@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #movie-details {
+            margin-top: 20px;
+        }
+
+        #movie-details p {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Additional styling for specific elements */
+        /* Customize as needed */
+        /* For example: */
+        /* #movie-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        } */
+    </style>
+</head>
+<body>
+    <h1 class="text-center" id="movie-title"></h1>
+    <div id="movie-details"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        // Retrieve movie ID from URL query parameter
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const movieID = urlParams.get('movie_id');
+
+        // Use D3.js to load movie data
+        d3.csv('/templates/movie.csv').then(function(movieData) {
+            // Find the movie information based on movieID
+            const selectedMovie = movieData.find(movie => movie.movieID === movieID);
+
+            // Display movie title
+            const movieTitle = document.getElementById('movie-title');
+            movieTitle.textContent = selectedMovie.title;
+
+            // Display movie details (You can modify this based on your CSV columns)
+            const movieDetails = document.getElementById('movie-details');
+            movieDetails.innerHTML = `
+                <p>Movie ID: ${selectedMovie.movieID}</p>
+                <p>Title: ${selectedMovie.title}</p>
+                <!-- Add more details as needed -->
+            `;
+        });
+    </script>
+</body>
+</html>
