@@ -6,20 +6,6 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
 
-        #movie-list{
-            display: grid;
-            justify-self: center;
-            justify-items: center;
-            grid-template-columns: repeat(3, 1fr);
-            grid-row: inherit;
-            gap: 20px; 
-            padding: 10px; 
-            grid-template: max-content;
-            list-style: none;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-        }
 
         #movie-list{
             display: grid;
@@ -34,7 +20,9 @@
             justify-content: center;
             align-items: center;
             align-self: center;
+            transition: transform .2s;
         }
+
 
         .text-header {
             text-align: center;
@@ -65,6 +53,7 @@
         body {
             background-color: #0e0601;
         }
+
         li{
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
@@ -74,8 +63,15 @@
             width: 48%; 
             margin-bottom: 10px;
             margin-right: 50px;
-            
+            transition: transform .2s ease;
         }
+        
+        li:hover{
+            transform:scale(1.2);
+        }
+
+
+
         a:link{
             color: antiquewhite;
         }
@@ -116,7 +112,7 @@
                 .attr('src', function (d) {
                     return '/static/dbposters/[movieid].jpg'.replace('[movieid]', d.movieID); // Dynamically set image source
                 })
-                .attr('alt', function (d) {
+                .attr('title', function (d) {
                     return d.title;
                 });
                 
