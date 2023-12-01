@@ -13,7 +13,7 @@
             justify-items: center;
             grid-template-columns: repeat(3, 1fr);
             grid-row: inherit;
-            gap: 20px; 
+            gap: 15px; 
             padding: 10px; 
             grid-template: max-content;
             list-style: none;
@@ -26,7 +26,7 @@
 
         .text-header {
             text-align: center;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: monospace;
             font-weight: 20px;
             font-size: 80px;
             color: blanchedalmond;
@@ -37,17 +37,6 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: large;
             color: #CE8A5E;
-        }
-
-
-
-        svg {
-            border: 1px solid black;
-        }
-
-        text {
-            font-size: 18px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
         body {
@@ -62,12 +51,15 @@
             lighting-color: cornsilk;
             width: 48%; 
             margin-bottom: 10px;
-            margin-right: 50px;
+            margin-right: 0px;
             transition: transform .2s ease;
         }
         
         li:hover{
             transform:scale(1.2);
+            color: #0e06010c;
+            opacity: .75;
+
         }
 
 
@@ -87,7 +79,8 @@
 <body>
 
     <h1 class="text-header">CSE412 Movie Database</h1>
-    <h3 class="text-center">Tyler Morgan, Sahil Sharma, Colton Hart, Jared Riley</h3>
+    <h3 class="text-center">Tyler Morgan, Sahil Sharma, Colton Hart, Jared Riley <br/> Select a movie to see it's showtimes
+    </h3>
 
     <ul id="movie-list"></ul> <!-- Use an unordered list for movie links -->
 
