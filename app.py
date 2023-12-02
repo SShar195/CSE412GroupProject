@@ -63,8 +63,29 @@ def homepage():
 
 @app.route('/movie_info.html')
 def movie_info():
-    # You can pass movie data dynamically here if needed
-    return render_template('movie_info.html')
+    # Retrieve movieID from query parameters
+    movie_id = request.args.get('movie_id')
+
+    # Fetch movie data based on the movie_id
+    connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT * FROM movie WHERE movieID = %s", (movie_id,))
+    movie_data = cursor.fetchone()  # Assuming one row for a movie ID
+
+    cursor.close()
+
+    # Fetch ticket data for the selected movieID
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT * FROM ticket WHERE movieID = %s", (movie_id,))
+    ticket_data = cursor.fetchall()
+
+    cursor.close()
+    connection.close()
+
+    # Pass both movie and ticket data to the template
+    return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
