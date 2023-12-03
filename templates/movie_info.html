@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movie Information</title>
+    <title>{{movie[0]}}</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -64,161 +64,53 @@
             text-align: left;
             color: #e59a69;
         }
+        h2{
+            text-align: center;
+            color: #e59a69;
+        }
+        caption{
+            text-align: center;
+            color: #e59a69;
+        }
     </style>
 </head>
 <body>
-    <h1 class="text-center" id="movie-title"></h1>
+    <h1 class="text-center" id="movie-title">
+        <header>{{movie[0]}}</header>
+    </h1>
     <div id="movie-details"></div>
     <div>
         <button onclick="sortByTheaterName()">Sort by Theater Name</button>
         <button onclick="sortByAddress()">Sort by Address</button>
     </div>
-    <table id="theater-table"></table>
+
+    <h2>Available Tickets</h2>
+    <table id="theater-table">
+    <caption> Available Tickets</caption>
+    <tr>
+        <th>Theater</th>
+        <th>Showtime</th>
+        <th>Seat</th>
+        <th>Date</th>
+        <th>Matinee</th>
+        <th>Price</th>
+    </tr>
+    {% for row in tickets %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        {% if row[4] == True%}
+        <td>Yes</td>
+        {% else %}
+        <td>No</td>
+        {% endif %}
+        <td>{{row[5]}}</td>
+
+    {% endfor %}</table>
 
     <div id="ticket-info"></div>
-
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script>
-        let theatersShowingMovie = []; // Store theaters for sorting
-
-        // Function to populate the theater table
-        function populateTheaterTable(theaters) {
-            const theaterTable = document.getElementById('theater-table');
-            theaterTable.innerHTML = `
-                <caption>Theaters Showing the Movie</caption>
-                <thead>
-                    <tr>
-                        <th>Theater Name</th>
-                        <th>Address</th>
-                        <!-- Add more headers if needed -->
-                    </tr>
-                </thead>
-                <tbody>
-                    ${theaters.map(theater => `
-                        <tr>
-                            <td>${theater.name}</td>
-                            <td>${theater.StreetAddress}</td>
-                            <!-- Add more columns if needed -->
-                        </tr>
-                    `).join('')}
-                </tbody>
-            `;
-        }
-
-        // Function to sort theaters by name and update the table
-        function sortByTheaterName() {
-            theatersShowingMovie.sort((a, b) => a.name.localeCompare(b.name));
-            populateTheaterTable(theatersShowingMovie);
-        }
-
-        // Function to sort theaters by address and update the table
-        function sortByAddress() {
-            theatersShowingMovie.sort((a, b) => a.StreetAddress.localeCompare(b.StreetAddress));
-            populateTheaterTable(theatersShowingMovie);
-        }
-
-        // Retrieve movie ID from URL query parameter
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const movieID = urlParams.get('movie_id');
-
-        // Use D3.js to load movie data
-        d3.csv('/static/movie.csv').then(function(movieData) {
-            // Find the movie information based on movieID
-            const selectedMovie = movieData.find(movie => movie.movieID === movieID);
-
-            // Display movie title
-            const movieTitle = document.getElementById('movie-title');
-            movieTitle.textContent = selectedMovie.title;
-
-            // Display movie details (You can modify this based on your CSV columns)
-            const movieDetails = document.getElementById('movie-details');
-            movieDetails.innerHTML = `
-                <p>Movie ID: ${selectedMovie.movieID}</p>
-                <p>Title: ${selectedMovie.title}</p>
-                <!-- Add more details as needed -->
-            `;
-
-            // Use D3.js to load ticket data
-            d3.csv('/static/ticket.csv').then(function(ticketData) {
-                // Filter tickets based on movieID to find theaters showing the movie
-                const theatersForMovie = ticketData
-                    .filter(ticket => ticket.movieID === movieID)
-                    .map(ticket => ticket.theaterID);
-
-                // Use the found theaterIDs to fetch theater information
-                d3.csv('/static/theater.csv').then(function(theaterData) {
-                    // Filter theaters based on theaterIDs associated with the movie
-                    theatersShowingMovie = theaterData.filter(theater =>
-                        theatersForMovie.includes(theater.theaterID)
-                    );
-
-                    // Create and populate the theater table
-                    const theaterTable = document.getElementById('theater-table');
-                    theaterTable.innerHTML = `
-                        <caption>Theaters Showing the Movie</caption>
-                        <thead>
-                            <tr>
-                                <th>Theater Name</th>
-                                <th>Address</th>
-                                <!-- Add more headers if needed -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${theatersShowingMovie.map(theater => `
-                                <tr>
-                                    <td>${theater.name}</td>
-                                    <td>${theater.StreetAddress}</td>
-                                    <!-- Add more columns if needed -->
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    `;
-
-                    // Pass and Display ticket information
-                    const ticketInfo = document.getElementById('ticket-info');
-                    if (ticketInfo) {
-                        ticketInfo.innerHTML = '<h2>Tickets for the Movie:</h2>';
-                        const ticketsForMovie = ticketData.filter(ticket => ticket.movieID === movieID);
-                        //ticketsForMovie.forEach(ticket => {
-                        //    ticketInfo.innerHTML += `
-                        //        <p>Showtime: ${ticket.showtime}</p>
-                        //        <p>Seat: ${ticket.seat}</p>
-                        //        <p>Is Matinee: ${ticket.isMatinee}</p>
-                        //    `;
-                        //});
-                    } else {
-                        console.error("Element with ID 'ticket-info' not found.");
-                    }
-                });
-            });
-
-        });
-
-    </script>
-    <table>
-            <tr>
-                <th>Theater</th>
-                <th>Showtime</th>
-                <th>Seat</th>
-                <th>Matinee</th>
-                <th>Price</th>
-            </tr>
-            ticket_data = {{tickets}}
-            {% for row in tickets %}
-            <tr>
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}</td>
-                <td>{{row[2]}}</td>
-                {% if row[3] == True%}
-                <td>Yes</td>
-                {% else %}
-                <td>No</td>
-                {% endif %}
-                <td>{{row[4]}}</td>
-
-            {% endfor %}
-    </table>
 
 </body>
 </html>

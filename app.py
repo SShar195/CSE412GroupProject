@@ -112,7 +112,7 @@ def movie_info():
     # Fetch ticket data for the selected movieID
     cursor = connection.cursor()
 
-    cursor.execute(f"SELECT theater.name, showtime, seat, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY price ASC LIMIT 10;")
+    cursor.execute(f"SELECT theater.name, showtime, seat, date, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY date, showtime ASC;")
     ticket_data = cursor.fetchall()
     print('sucsess')
 
