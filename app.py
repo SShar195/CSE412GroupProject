@@ -112,11 +112,9 @@ requestInfo(sql)
 #     # Fetch ticket data for the selected movieID
 #     cursor = connection.cursor()
 
-#     cursor.execute(f"SELECT theater.name, showtime, seat, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY price ASC LIMIT 10;")
-#     ticket_data = cursor.fetchall()
-#     print(type(ticket_data))
-#     print(ticket_data)
-#     print('sucsess')
+    cursor.execute(f"SELECT theater.name, showtime, seat, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY price ASC LIMIT 10;")
+    ticket_data = cursor.fetchall()
+    print('sucsess')
 
 #     cursor.close()
 #     connection.close()
