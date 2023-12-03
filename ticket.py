@@ -92,6 +92,7 @@ def weeklyTickets():
 
     for theater in Theaters:
         for i in range(1, 7):
+            theDate = f"11/{i+18}"
             showtime =  random.choice(ticketTimes)
             for row in ticketRows:
                 for column in ticketColumn:
@@ -107,6 +108,7 @@ def weeklyTickets():
                         "movieID": random.choice(Movies)['movieID'],
                         "theaterID": theater['theaterId'],
                         "showtime": showtime,
+                        "date": theDate,
                         "seat": row + column,
                         "isMatinee": isMatinee,
                         "price": price
