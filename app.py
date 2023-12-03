@@ -112,7 +112,7 @@ def movie_info():
     # Fetch ticket data for the selected movieID
     cursor = connection.cursor()
 
-    cursor.execute(f"SELECT theater.name, showtime, seat, date, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY date, showtime ASC;")
+    cursor.execute(f"SELECT theater.name, showtime, seat, date, ismatinee, price, theater.theaterid FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY date, showtime ASC;")
     ticket_data = cursor.fetchall()
     print('sucsess')
 
@@ -129,15 +129,20 @@ def movie_info():
 def theater_page():
     # Retrieve theaterID and movieID from query parameters
     theater_id = request.args.get("theater_id")
+    # print(f"{theater_id} <------ here")
     movie_id = request.args.get("movie_id")
 
     # Fetch theater data based on the theater_id
     connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
     cursor = connection.cursor()
+    cursor.execute(f"SELECT * FROM movie WHERE movieID = '{movie_id}'")
+    movie_data = cursor.fetchone()
+    print(movie_data)
+
 
     cursor.execute(f"SELECT * FROM theater WHERE theaterID = '{theater_id}'")
     theater_data = cursor.fetchone()
-
+    # print(theater_data)
     cursor.close()
 
     # Fetch ticket data for the selected movieID at the given theater
@@ -145,12 +150,13 @@ def theater_page():
 
     cursor.execute(f"SELECT showtime, seat, ismatinee, price FROM ticket WHERE movieID = '{movie_id}' AND theaterID = '{theater_id}'")
     ticket_data = cursor.fetchall()
+    # print(ticket_data)
 
     cursor.close()
     connection.close()
 
     # Pass theater, movie, and ticket data to the template
-    return render_template('theater_page.html', theater=theater_data, movie={'title': 'Your Movie Title'}, tickets=ticket_data)
+    return render_template('theater_page.html', theater=theater_data, movie=movie_data, tickets=ticket_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

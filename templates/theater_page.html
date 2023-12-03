@@ -4,20 +4,84 @@
     <meta charset="UTF-8">
     <title>Theater Information</title>
     <!-- Add your CSS styles or external links here -->
+    <style>
+              body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            background-color: #0e0601;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #0e0601;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e59a69;
+        }
+
+        #movie-details {
+            margin-top: 20px;
+        }
+
+        #movie-details p {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #805d48;
+        }
+
+        th, td {
+            border: 1px solid #61402b;
+            padding: 8px;
+            text-align: left;
+            color: rgb(182, 167, 147);
+        }
+
+        th {
+            background-color: #664b3a;
+        }
+
+        button {
+            margin-right: 10px;
+            background-color: #e59a69;
+            color: 61402b;
+            font-family: 'Courier New', Courier, monospace;
+            size:2lvb;
+            border-style: hidden;
+        }
+        p{
+            text-align: left;
+            color: #e59a69;
+        }
+        h2{
+            text-align: center;
+            color: #e59a69;
+        }
+        caption{
+            text-align: center;
+            color: #e59a69;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center" id="theater-title">{{ theater.name }}</h1>
+        <h1 class="text-center" id="theater-title">{{ theater[1] }}</h1>
         <!-- Display theater name, adjust the variable based on your data structure -->
 
-        <div id="theater-details">
-            <p>Theater ID: {{ theater.theaterID }}</p>
-            <p>Address: {{ theater.StreetAddress }}</p>
-            <!-- Display other theater details here -->
-        </div>
-
         <!-- Display available tickets for the selected movie at this theater -->
-        <h2>Tickets Available for {{ movie.title }} at {{ theater.name }}</h2>
+        <h2>Tickets available for {{ movie[0] }} at {{ theater[1] }}</h2>
         <table>
             <thead>
                 <tr>
@@ -31,10 +95,10 @@
             <tbody>
                 {% for ticket in tickets %}
                     <tr>
-                        <td>{{ ticket.showtime }}</td>
-                        <td>{{ ticket.seat }}</td>
-                        <td>{{ "Yes" if ticket.isMatinee else "No" }}</td>
-                        <td>{{ ticket.price }}</td>
+                        <td>{{ ticket[0] }}</td>
+                        <td>{{ ticket[1] }}</td>
+                        <td>{{ "Yes" if ticket[2] else "No" }}</td>
+                        <td>{{ ticket[3] }}</td>
                         <!-- Display other ticket details if needed -->
                     </tr>
                 {% endfor %}
