@@ -77,7 +77,7 @@ def requestInfo(sql):
     cursor.execute(sql)
     header = [row[0] for row in cursor.description]
     rows = cursor.fetchall()
-    with open('request.csv', 'w', newline='') as csv_file:
+    with open(r'static/request.csv', 'w', newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter = ';')
         writer.writerow(header)
         writer.writerows(rows)
