@@ -89,41 +89,41 @@ sql = '''
 SELECT * FROM ticket LIMIT 20'''
 requestInfo(sql)
 
-# @app.route('/')
-# def homepage():
-#     return render_template(r'homepage.html')
+@app.route('/')
+def homepage():
+    return render_template(r'homepage.html')
 
-# @app.route('/movie_info.html')
-# def movie_info():
-#     # Retrieve movieID from query parameters
-#     movie_id = request.args.get("movie_id")
-#     print(movie_id)
+@app.route('/movie_info.html')
+def movie_info():
+    # Retrieve movieID from query parameters
+    movie_id = request.args.get("movie_id")
+    print(movie_id)
 
-#     # Fetch movie data based on the movie_id
-#     connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
-#     cursor = connection.cursor()
+    # Fetch movie data based on the movie_id
+    connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
+    cursor = connection.cursor()
+    
+    cursor.execute(f"SELECT * FROM movie WHERE movieID = '{movie_id}'")
+    movie_data = cursor.fetchone()  # Assuming one row for a movie ID
+    print(movie_data)
 
-#     cursor.execute(f"SELECT * FROM movie WHERE movieID = '{movie_id}'")
-#     movie_data = cursor.fetchone()  # Assuming one row for a movie ID
-#     print(movie_data)
+    cursor.close()
 
-#     cursor.close()
-
-#     # Fetch ticket data for the selected movieID
-#     cursor = connection.cursor()
+    # Fetch ticket data for the selected movieID
+    cursor = connection.cursor()
 
     cursor.execute(f"SELECT theater.name, showtime, seat, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY price ASC LIMIT 10;")
     ticket_data = cursor.fetchall()
     print('sucsess')
 
-#     cursor.close()
-#     connection.close()
+    cursor.close()
+    connection.close()
 
-#     # ticket_table = tabulate(ticket_data, tablefmt='html')
-#     # print(ticket_table)
+    # ticket_table = tabulate(ticket_data, tablefmt='html')
+    # print(ticket_table)
 
-#     # Pass both movie and ticket data to the template
-#     return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
+    # Pass both movie and ticket data to the template
+    return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
