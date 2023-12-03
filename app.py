@@ -125,5 +125,32 @@ def movie_info():
     # Pass both movie and ticket data to the template
     return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
 
+@app.route('/theater_info.html')
+def theater_info():
+    # Retrieve theaterID and movieID from query parameters
+    theater_id = request.args.get("theater_id")
+    movie_id = request.args.get("movie_id")
+
+    # Fetch theater data based on the theater_id
+    connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
+    cursor = connection.cursor()
+
+    cursor.execute(f"SELECT * FROM theater WHERE theaterID = '{theater_id}'")
+    theater_data = cursor.fetchone()
+
+    cursor.close()
+
+    # Fetch ticket data for the selected movieID at the given theater
+    cursor = connection.cursor()
+
+    cursor.execute(f"SELECT showtime, seat, ismatinee, price FROM ticket WHERE movieID = '{movie_id}' AND theaterID = '{theater_id}'")
+    ticket_data = cursor.fetchall()
+
+    cursor.close()
+    connection.close()
+
+    # Pass theater, movie, and ticket data to the template
+    return render_template('theater_page.html', theater=theater_data, movie={'title': 'Your Movie Title'}, tickets=ticket_data)
+
 if __name__ == '__main__':
     app.run(debug=True)

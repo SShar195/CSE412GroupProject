@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Theater Information</title>
+    <!-- Add your CSS styles or external links here -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center" id="theater-title">{{ theater.name }}</h1>
+        <!-- Display theater name, adjust the variable based on your data structure -->
+
+        <div id="theater-details">
+            <p>Theater ID: {{ theater.theaterID }}</p>
+            <p>Address: {{ theater.StreetAddress }}</p>
+            <!-- Display other theater details here -->
+        </div>
+
+        <!-- Display available tickets for the selected movie at this theater -->
+        <h2>Tickets Available for {{ movie.title }} at {{ theater.name }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Showtime</th>
+                    <th>Seat</th>
+                    <th>Is Matinee</th>
+                    <th>Price</th>
+                    <!-- Add more headers if needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for ticket in tickets %}
+                    <tr>
+                        <td>{{ ticket.showtime }}</td>
+                        <td>{{ ticket.seat }}</td>
+                        <td>{{ "Yes" if ticket.isMatinee else "No" }}</td>
+                        <td>{{ ticket.price }}</td>
+                        <!-- Display other ticket details if needed -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Other sections or details related to the theater -->
+
+    </div>
+</body>
+</html>
