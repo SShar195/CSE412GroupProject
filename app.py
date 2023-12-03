@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
 import psycopg2
+import requests
 import os
 import csv
 from dotenv import load_dotenv
@@ -15,7 +16,18 @@ database_secret = os.getenv("DATABASE_NAME")
 
 connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
 cursor = connection.cursor()
+connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
+cursor = connection.cursor()
 
+ticket_table = '''
+    CREATE TABLE IF NOT EXISTS ticket (
+        movieID VARCHAR(6),
+        theaterID VARCHAR(5),
+        showtime VARCHAR(5),
+        seat VARCHAR(3),
+        isMatinee BOOLEAN,
+        price VARCHAR(6)
+    )'''
 ticket_table = '''
     CREATE TABLE IF NOT EXISTS ticket (
         movieID VARCHAR(6),
@@ -49,15 +61,15 @@ with open('ticket.csv', 'r') as f:
 
 with open('theater.csv', 'r') as f:
     next(f)
-    cursor.copy_from(f, 'theater', sep=';')
+    cursor.copy_from(f, 'theater', sep=',')
 
 with open('movie.csv', 'r') as f:
     next(f)
     cursor.copy_from(f, 'movie', sep=';')
 
-ctypes.windll.shell32.IsUserAnAdmin()
-
 connection.commit()
+connection.close()
+cursor.close()
 
 @app.route('/')
 def homepage():
@@ -65,8 +77,34 @@ def homepage():
 
 @app.route('/movie_info.html')
 def movie_info():
-    # You can pass movie data dynamically here if needed
-    return render_template('movie_info.html')
+    # Retrieve movieID from query parameters
+    movie_id = request.args.get("movie_id")
+    print(movie_id)
+
+    # Fetch movie data based on the movie_id
+    connection = psycopg2.connect(host='localhost', database=database_secret, user=username_secret, password=password_secret)
+    cursor = connection.cursor()
+
+    cursor.execute(f"SELECT * FROM movie WHERE movieID = '{movie_id}'")
+    movie_data = cursor.fetchone()  # Assuming one row for a movie ID
+    print(movie_data)
+
+    cursor.close()
+
+    # Fetch ticket data for the selected movieID
+    cursor = connection.cursor()
+
+    cursor.execute(f"SELECT theater.name, showtime, seat, ismatinee, price FROM ticket JOIN theater ON ticket.theaterid = theater.theaterid WHERE movieID = '{movie_id}' ORDER BY price ASC LIMIT 10;")
+    ticket_data = cursor.fetchall()
+    print(type(ticket_data))
+    print(ticket_data)
+    print('sucsess')
+
+    cursor.close()
+    connection.close()
+
+    # Pass both movie and ticket data to the template
+    return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

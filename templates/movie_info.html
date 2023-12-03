@@ -75,6 +75,8 @@
     </div>
     <table id="theater-table"></table>
 
+    <div id="ticket-info"></div>
+
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
         let theatersShowingMovie = []; // Store theaters for sorting
@@ -173,22 +175,53 @@
                         </tbody>
                     `;
 
-                    //// Display ticket information
-                    //const ticketInfo = document.getElementById('ticket-info');
-                    //ticketInfo.innerHTML = '<h2>Tickets for the Movie:</h2>';
-                    //const ticketsForMovie = ticketData.filter(ticket => ticket.movieID === movieID);
-                    //ticketsForMovie.forEach(ticket => {
-                    //    ticketInfo.innerHTML += `
-                    //        <p>Showtime: ${ticket.showtime}</p>
-                    //        <p>Seat: ${ticket.seat}</p>
-                    //        <p>Is Matinee: ${ticket.isMatinee}</p>
-                    //        <!-- Add more ticket details if needed -->
-                    //    `;
-                    //});
+                    // Pass and Display ticket information
+                    const ticketInfo = document.getElementById('ticket-info');
+                    if (ticketInfo) {
+                        ticketInfo.innerHTML = '<h2>Tickets for the Movie:</h2>';
+                        const ticketsForMovie = ticketData.filter(ticket => ticket.movieID === movieID);
+                        //ticketsForMovie.forEach(ticket => {
+                        //    ticketInfo.innerHTML += `
+                        //        <p>Showtime: ${ticket.showtime}</p>
+                        //        <p>Seat: ${ticket.seat}</p>
+                        //        <p>Is Matinee: ${ticket.isMatinee}</p>
+                        //    `;
+                        //});
+                    } else {
+                        console.error("Element with ID 'ticket-info' not found.");
+                    }
                 });
             });
 
         });
+
     </script>
+    <table>
+            <tr>
+                <th>Theater</th>
+                <th>Showtime</th>
+                <th>Seat</th>
+                <th>Matinee</th>
+                <th>Price</th>
+            </tr>
+            {% for row in ticket_data %}
+            <tr>
+                <td>row[0]</td>
+            </tr>
+            <tr>
+                <td>row[1]</td>
+            </tr>
+            <tr>
+                <td>row[2]</td>
+            </tr>
+            <tr>
+               <td>row[3]</td>
+            </tr>
+            <tr>
+                <td>row[4]</td>
+            </tr>
+            {% endfor %}
+    </table>
+
 </body>
 </html>
