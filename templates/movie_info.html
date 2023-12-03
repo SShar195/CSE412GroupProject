@@ -75,16 +75,18 @@
     </style>
 </head>
 <body>
-    <h1 class="text-center" id="movie-title"></h1>
-    <div id="movie-details"></div>
-    <div>
-        <button onclick="sortByTheaterName()">Sort by Theater Name</button>
-        <button onclick="sortByAddress()">Sort by Address</button>
-    </div>
+    <h1 class="text-center" id="movie-title">
+        {{movie[0]}}
+    </h1>
+    
 
     <h2>Available Tickets</h2>
     <table id="theater-table">
-    <caption> Available Tickets</caption>
+    <div id="movie-details"></div>
+        <div>
+            <button onclick="sortByTheaterName()">Sort by Theater Name</button>
+            <button onclick="sortByAddress()">Sort by Address</button>
+        </div>
     <tr>
         <th>Theater</th>
         <th>Showtime</th>
