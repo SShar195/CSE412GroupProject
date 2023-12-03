@@ -16,28 +16,16 @@ database_secret = os.getenv("DATABASE_NAME")
 
 connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
 cursor = connection.cursor()
-connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
-cursor = connection.cursor()
 
 ticket_table = '''
     CREATE TABLE IF NOT EXISTS ticket (
         movieID VARCHAR(6),
-        theaterID VARCHAR(5),
+        theaterID VARCHAR(6),
         showtime VARCHAR(5),
         seat VARCHAR(3),
         isMatinee BOOLEAN,
         price VARCHAR(6)
     )'''
-ticket_table = '''
-    CREATE TABLE IF NOT EXISTS ticket (
-        movieID VARCHAR(6),
-        theaterID VARCHAR(5),
-        showtime VARCHAR(5),
-        seat VARCHAR(3),
-        isMatinee BOOLEAN,
-        price VARCHAR(6)
-    )'''
-
 movie_table = '''
     CREATE TABLE IF NOT EXISTS movie (
         title VARCHAR(124),
@@ -46,7 +34,7 @@ movie_table = '''
 
 theater_table = '''
     CREATE TABLE IF NOT EXISTS theater (
-        theaterID VARCHAR(5),
+        theaterID VARCHAR(6),
         name VARCHAR(124),
         StreetAddress VARCHAR(248)
     )'''
@@ -54,22 +42,50 @@ theater_table = '''
 cursor.execute(ticket_table)
 cursor.execute(movie_table)
 cursor.execute(theater_table)
+# Checking to see if the table is empty, if it is, send the data to the database
+cursor.execute("SELECT * FROM ticket")
 
-with open('ticket.csv', 'r') as f:
-    next(f) # Skip the header row.
-    cursor.copy_from(f, 'ticket', sep=';')
+if cursor.fetchall() == []:
+    with open('ticket.csv', 'r') as f:
+        next(f) # Skip the header row.
+        cursor.copy_from(f, 'ticket', sep=';')
 
-with open('theater.csv', 'r') as f:
-    next(f)
-    cursor.copy_from(f, 'theater', sep=',')
+cursor.execute("SELECT * FROM theater")
+if cursor.fetchall() == []:
+    with open('theater.csv', 'r') as f:
+        next(f)
+        cursor.copy_from(f, 'theater', sep=';')
 
-with open('movie.csv', 'r') as f:
-    next(f)
-    cursor.copy_from(f, 'movie', sep=';')
+cursor.execute("SELECT * FROM movie")
+
+if cursor.fetchall() == []:
+    with open('movie.csv', 'r') as f:
+        next(f)
+        cursor.copy_from(f, 'movie', sep=';')
 
 connection.commit()
 connection.close()
 cursor.close()
+
+# Returns the requested information to request.csv
+def requestInfo(sql):
+    connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
+    cursor = connection.cursor()
+
+    cursor.execute(sql)
+    header = [row[0] for row in cursor.description]
+    rows = cursor.fetchall()
+    with open('request.csv', 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter = ';')
+        writer.writerow(header)
+        writer.writerows(rows)
+        csv_file.close()
+    
+    connection.close()
+    return
+sql = '''
+SELECT * FROM movie'''
+requestInfo(sql)
 
 @app.route('/')
 def homepage():
