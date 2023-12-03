@@ -125,8 +125,8 @@ def movie_info():
     # Pass both movie and ticket data to the template
     return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
 
-@app.route('/theater_info.html')
-def theater_info():
+@app.route('/theater_page.html')
+def theater_page():
     # Retrieve theaterID and movieID from query parameters
     theater_id = request.args.get("theater_id")
     movie_id = request.args.get("movie_id")
