@@ -204,22 +204,19 @@
                 <th>Matinee</th>
                 <th>Price</th>
             </tr>
-            {% for row in ticket_data %}
+            ticket_data = {{tickets}}
+            {% for row in tickets %}
             <tr>
-                <td>row[0]</td>
-            </tr>
-            <tr>
-                <td>row[1]</td>
-            </tr>
-            <tr>
-                <td>row[2]</td>
-            </tr>
-            <tr>
-               <td>row[3]</td>
-            </tr>
-            <tr>
-                <td>row[4]</td>
-            </tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                {% if row[3] == True%}
+                <td>Yes</td>
+                {% else %}
+                <td>No</td>
+                {% endif %}
+                <td>{{row[4]}}</td>
+
             {% endfor %}
     </table>
 

@@ -5,6 +5,7 @@ import requests
 import os
 import csv
 from dotenv import load_dotenv
+from tabulate import tabulate
 
 load_dotenv()
 
@@ -118,6 +119,9 @@ def movie_info():
 
     cursor.close()
     connection.close()
+
+    # ticket_table = tabulate(ticket_data, tablefmt='html')
+    # print(ticket_table)
 
     # Pass both movie and ticket data to the template
     return render_template('movie_info.html', movie=movie_data, tickets=ticket_data)
