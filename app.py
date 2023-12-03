@@ -17,7 +17,18 @@ database_secret = os.getenv("DATABASE_NAME")
 
 connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
 cursor = connection.cursor()
+connection = psycopg2.connect(host='localhost', database = database_secret, user = username_secret, password = password_secret)
+cursor = connection.cursor()
 
+ticket_table = '''
+    CREATE TABLE IF NOT EXISTS ticket (
+        movieID VARCHAR(6),
+        theaterID VARCHAR(5),
+        showtime VARCHAR(5),
+        seat VARCHAR(3),
+        isMatinee BOOLEAN,
+        price VARCHAR(6)
+    )'''
 ticket_table = '''
     CREATE TABLE IF NOT EXISTS ticket (
         movieID VARCHAR(6),
