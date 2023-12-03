@@ -75,42 +75,44 @@
     </style>
 </head>
 <body>
-    <h1 class="text-center" id="movie-title">
-        {{movie[0]}}
-    </h1>
-    
+    <h1 class="text-center" id="movie-title">{{ movie[0] }}</h1>
 
     <h2>Available Tickets</h2>
     <table id="theater-table" pagesize="10">
-    <div id="movie-details"></div>
+        <div id="movie-details"></div>
         <div>
             <button onclick="sortByTheaterName()">Sort by Theater Name</button>
             <button onclick="sortByAddress()">Sort by Address</button>
         </div>
-    <tr>
-        <th>Theater</th>
-        <th>Showtime</th>
-        <th>Seat</th>
-        <th>Date</th>
-        <th>Matinee</th>
-        <th>Price</th>
-    </tr>
-    {% for row in tickets %}
-    <tr>
-        <td>{{row[0]}}</td>
-        <td>{{row[1]}}</td>
-        <td>{{row[2]}}</td>
-        <td>{{row[3]}}</td>
-        {% if row[4] == True%}
-        <td>Yes</td>
-        {% else %}
-        <td>No</td>
-        {% endif %}
-        <td>{{row[5]}}</td>
-
-    {% endfor %}</table>
+        <tr>
+            <th>Theater</th>
+            <th>Showtime</th>
+            <th>Seat</th>
+            <th>Date</th>
+            <th>Matinee</th>
+            <th>Price</th>
+        </tr>
+        {% for row in tickets %}
+        <tr>
+            <td>
+                <!-- Create a link for each theater -->
+                <a href="/theater_page.html?theater_id={{ row[6] }}&movie_id={{ movie_id }}">
+                    {{ row[0] }}
+                </a>
+            </td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            {% if row[4] == True %}
+            <td>Yes</td>
+            {% else %}
+            <td>No</td>
+            {% endif %}
+            <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
     <div id="ticket-info"></div>
-
 </body>
 </html>
