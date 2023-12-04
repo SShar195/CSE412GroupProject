@@ -82,6 +82,10 @@
 
         <!-- Display available tickets for the selected movie at this theater -->
         <h2>Tickets available for {{ movie[0] }} at {{ theater[1] }}</h2>
+
+        <!-- Back button -->
+        <button onclick="goBack()">Back</button>
+        
         <table>
             <thead>
                 <tr>
@@ -108,5 +112,10 @@
         <!-- Other sections or details related to the theater -->
 
     </div>
+    <script>
+        function goBack() {
+            window.location.href = '/movie_info.html?movie_id=' + d.movieID; // Replace with the appropriate URL
+        }
+    </script>
 </body>
 </html>

@@ -103,6 +103,9 @@
 <body>
     <h1 class="text-center" id="movie-title">{{ movie[0] }}</h1>
 
+     <!-- Back button -->
+    <button onclick="goBack()">Back</button>
+
     <h2>Available Tickets</h2>
     <table id="theater-table" pagesize="10">
         <div id="movie-details"></div>
@@ -141,5 +144,11 @@
     </table>
 
     <div id="ticket-info"></div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
