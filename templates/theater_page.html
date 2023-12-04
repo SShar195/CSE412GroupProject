@@ -146,11 +146,12 @@
             var rows = Array.from(tableBody.getElementsByTagName('tr'));
             rows.shift(); // Remove table header row
 
-            if (column === 'showtime') {
+            if (column == 'showtime') {
                 rows.sort(compareShowtimes);
                 sortByDirection.showtime = toggleSortDirection(sortByDirection.showtime);
-            } else if (column === 'price') {
-                rows.sort(comparePrices);
+            } else if (column == 'price') {
+                rows.sort((a,b) => a[14] - b[14]);
+                print(a)
                 sortByDirection.price = toggleSortDirection(sortByDirection.price);
             }
 
@@ -172,9 +173,7 @@
         }
 
         function comparePrices(a, b) {
-            var priceA = parseFloat(a.cells[3].innerText);
-            var priceB = parseFloat(b.cells[3].innerText);
-            return (sortByDirection.price === 'asc') ? priceA - priceB : priceB - priceA;
+           return(sort((a,b) => b[3] - a[3]))
         }
 
         function compareTimes(timeA, timeB) {
