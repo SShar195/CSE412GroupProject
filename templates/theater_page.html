@@ -92,6 +92,9 @@
         <button onclick="sortByShowtime()">
             Sort by Showtime
         </button>
+        <button onclick="sortBy('price')">
+            Sort by Price
+        </button>
         
         <table>
             <thead>
@@ -127,21 +130,32 @@
             window.location.href = '/movie_info.html?movie_id='; // Replace with the appropriate URL
         }
 
-        function sortByShowtime() {
+        let sortByDirection = {
+            showtime: 'asc',
+            price: 'asc'
+        };
+
+        function sortBy(column) {
             // Get the table body
             var tableBody = document.getElementById('ticketTable');
 
-            // Convert NodeList to array and sort by the fifth column (showtime)
+            // Convert NodeList to array
             var rows = Array.from(tableBody.getElementsByTagName('tr'));
             rows.shift(); // Remove table header row
 
-            rows.sort(function(a, b) {
-                var showtimeA = a.cells[0].innerText;
-                var showtimeB = b.cells[0].innerText;
-                
-                // Custom function to compare showtime strings HH:MM
-                return compareShowtimes(showtimeA, showtimeB);
-            });
+            // Sort rows based on column
+            if (column === 'showtime') {
+                rows.sort(compareShowtimes);
+                sortByDirection.showtime = toggleSortDirection(sortByDirection.showtime);
+            } else if (column === 'price') {
+                rows.sort(comparePrices);
+                sortByDirection.price = toggleSortDirection(sortByDirection.price);
+            }
+
+            // Reverse the rows if sorting direction is descending
+            if (sortByDirection[column] === 'desc') {
+                rows.reverse();
+            }
 
             // Reorder the table rows
             rows.forEach(function(row) {
@@ -149,7 +163,19 @@
             });
         }
 
-        function compareShowtimes(timeA, timeB) {
+        function compareShowtimes(a, b) {
+            var showtimeA = a.cells[0].innerText;
+            var showtimeB = b.cells[0].innerText;
+            return compareTimes(showtimeA, showtimeB);
+        }
+
+        function comparePrices(a, b) {
+            var priceA = parseFloat(a.cells[3].innerText);
+            var priceB = parseFloat(b.cells[3].innerText);
+            return (sortByDirection.price === 'asc') ? priceA - priceB : priceB - priceA;
+        }
+
+        function compareTimes(timeA, timeB) {
             var timePartsA = timeA.split(':').map(Number);
             var timePartsB = timeB.split(':').map(Number);
 
@@ -158,6 +184,10 @@
             } else {
                 return timePartsA[1] - timePartsB[1];
             }
+        }
+
+        function toggleSortDirection(direction) {
+            return direction === 'asc' ? 'desc' : 'asc';
         }
     </script>
 </body>
