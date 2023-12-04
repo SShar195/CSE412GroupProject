@@ -72,6 +72,32 @@
             text-align: center;
             color: #e59a69;
         }
+        li{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-variant: small-caps;
+            font-size: large;
+            lighting-color: cornsilk;
+            width: 48%; 
+            margin-bottom: 10px;
+            margin-right: 0px;
+            transition: transform .2s ease;
+        }
+        
+        li:hover{
+            transform:scale(1.2);
+            color: #0e06010c;
+            opacity: .75;
+        }
+        a:link{
+            color: antiquewhite;
+        }
+        a:visited{
+            color:antiquewhite
+        }
+        a:hover{
+            color:#c68458
+        }
     </style>
 </head>
 <body>
@@ -97,7 +123,7 @@
             <td>
                 <!-- Create a link for each theater -->
                 <a href="/theater_page.html?theater_id={{row[6]}}&movie_id={{ movie[1] }}">
-                    {{ row[0] }}
+                    {{row[0}}
                     {{row[6]}}
                 </a>
             </td>
