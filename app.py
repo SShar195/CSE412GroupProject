@@ -148,7 +148,7 @@ def theater_page():
     # Fetch ticket data for the selected movieID at the given theater
     cursor = connection.cursor()
 
-    cursor.execute(f"SELECT showtime, seat, ismatinee, price FROM ticket WHERE movieID = '{movie_id}' AND theaterID = '{theater_id}'")
+    cursor.execute(f"SELECT showtime, seat, ismatinee, price, date FROM ticket WHERE movieID = '{movie_id}' AND theaterID = '{theater_id}'")
     ticket_data = cursor.fetchall()
     # print(ticket_data)
 

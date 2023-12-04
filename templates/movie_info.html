@@ -98,13 +98,24 @@
         a:hover{
             color:#c68458
         }
+        .backbutton{
+            size: 0cqmin;
+            background-color: #e59a69;
+            color: 61402b;
+            font-family: 'Courier New', Courier, monospace;
+            size:2lvb;
+            border-style: hidden;
+        }
+
     </style>
 </head>
 <body>
+    <button onclick="window.location.href='/'">Back</button>
+
     <h1 class="text-center" id="movie-title">{{ movie[0] }}</h1>
 
      <!-- Back button -->
-    <button onclick="goBack()">Back</button>
+    
 
     <h2>Available Tickets</h2>
     <table id="theater-table" pagesize="10">

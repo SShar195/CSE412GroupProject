@@ -77,14 +77,19 @@
 </head>
 <body>
     <div class="container">
+        <!-- Back button -->
+        <button onclick="window.location.href='movie_info.html?movie_id={{movie[1]}}'">
+            Back
+        </button>
+
+        
         <h1 class="text-center" id="theater-title">{{ theater[1] }}</h1>
         <!-- Display theater name, adjust the variable based on your data structure -->
 
         <!-- Display available tickets for the selected movie at this theater -->
         <h2>Tickets available for {{ movie[0] }} at {{ theater[1] }}</h2>
 
-        <!-- Back button -->
-        <button onclick="goBack()">Back</button>
+
         
         <table>
             <thead>
@@ -93,6 +98,7 @@
                     <th>Seat</th>
                     <th>Is Matinee</th>
                     <th>Price</th>
+                    <th>Date</th>
                     <!-- Add more headers if needed -->
                 </tr>
             </thead>
@@ -103,6 +109,7 @@
                         <td>{{ ticket[1] }}</td>
                         <td>{{ "Yes" if ticket[2] else "No" }}</td>
                         <td>{{ ticket[3] }}</td>
+                        <td>{{ ticket[4] }}</td>
                         <!-- Display other ticket details if needed -->
                     </tr>
                 {% endfor %}
@@ -114,7 +121,7 @@
     </div>
     <script>
         function goBack() {
-            window.location.href = '/movie_info.html?movie_id=' + d.movieID; // Replace with the appropriate URL
+            window.location.href = '/movie_info.html?movie_id='; // Replace with the appropriate URL
         }
     </script>
 </body>
