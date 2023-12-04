@@ -118,16 +118,11 @@
 
     <h1 class="text-center" id="movie-title">{{ movie[0] }}</h1>
 
-     <!-- Back button -->
-    
-
     <h2>Available Tickets</h2>
     <table id="theater-table" pagesize="10">
         <div id="movie-details"></div>
-        <div>
-            <button onclick="sortByTheaterName()">Sort by Theater Name</button>
-            <button onclick="sortByAddress()">Sort by Address</button>
-        </div>
+        <button onclick="sortTable('theater')">Sort by Theater</button>
+        <button onclick="sortTable('price')">Sort by Price</button>
         <tr>
             <th>Theater</th>
             <th>Showtime</th>
@@ -162,6 +157,53 @@
     <script>
         function goBack() {
             window.history.back();
+        }
+
+        function sortTable(criteria) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("theater-table");
+            switching = true;
+    
+            while (switching) {
+                switching = false;
+                rows = table.getElementsByTagName("tr");
+    
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+    
+                    x = rows[i].getElementsByTagName("td")[getIndexOfCriteria(criteria)];
+                    y = rows[i + 1].getElementsByTagName("td")[getIndexOfCriteria(criteria)];
+    
+                    if (criteria === 'theater' || criteria === 'price') {
+                        if (criteria === 'theater') {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+    
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                    }
+                }
+            }
+        }
+    
+        function getIndexOfCriteria(criteria) {
+            var headers = document.getElementById("theater-table").querySelectorAll("th");
+            for (var i = 0; i < headers.length; i++) {
+                if (headers[i].textContent.toLowerCase() === criteria) {
+                    return i;
+                }
+            }
+            return -1;
         }
     </script>
 </body>
