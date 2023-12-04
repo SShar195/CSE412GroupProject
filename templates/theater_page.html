@@ -89,7 +89,7 @@
         <h2>Tickets available for {{ movie[0] }} at {{ theater[1] }}</h2>
 
         <!-- Add a button for sorting -->
-        <button onclick="sortByShowtime()">
+        <button onclick="sortBy('showtime')">
             Sort by Showtime
         </button>
         <button onclick="sortBy('price')">
@@ -136,14 +136,10 @@
         };
 
         function sortBy(column) {
-            // Get the table body
             var tableBody = document.getElementById('ticketTable');
-
-            // Convert NodeList to array
             var rows = Array.from(tableBody.getElementsByTagName('tr'));
             rows.shift(); // Remove table header row
 
-            // Sort rows based on column
             if (column === 'showtime') {
                 rows.sort(compareShowtimes);
                 sortByDirection.showtime = toggleSortDirection(sortByDirection.showtime);
