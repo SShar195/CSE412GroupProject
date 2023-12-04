@@ -48,20 +48,20 @@ cursor.execute(theater_table)
 cursor.execute("SELECT * FROM ticket")
 
 if cursor.fetchall() == []:
-    with open('ticket.csv', 'r') as f:
+    with open('static/ticket.csv', 'r') as f:
         next(f) # Skip the header row.
         cursor.copy_from(f, 'ticket', sep=';')
 
 cursor.execute("SELECT * FROM theater")
 if cursor.fetchall() == []:
-    with open('theater.csv', 'r') as f:
+    with open('static/theater.csv', 'r') as f:
         next(f)
         cursor.copy_from(f, 'theater', sep=';')
 
 cursor.execute("SELECT * FROM movie")
 
 if cursor.fetchall() == []:
-    with open('movie.csv', 'r') as f:
+    with open('static/movie.csv', 'r') as f:
         next(f)
         cursor.copy_from(f, 'movie', sep=';')
 
