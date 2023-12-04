@@ -98,7 +98,7 @@
         <button onclick="sortBy('showtime')">
             Sort by Showtime
         </button>
-        <button onclick="sortBy('price')">
+        <button onclick="sortBy('showtime')">
             Sort by Price
         </button>
         
@@ -115,14 +115,6 @@
             </thead>
             <tbody id="ticketTable">
                 <!-- Loop through tickets and display -->
-                <tr id="rowToMove">
-                    <td>{{ ticket[0] }}</td>
-                    <td>{{ ticket[1] }}</td>
-                    <td>{{ "Yes" if ticket[2] else "No" }}</td>
-                    <td>{{ ticket[3] }}</td>
-                    <td>{{ ticket[4] }}</td>
-                    <!-- Display other ticket details if needed -->
-                </tr>
                 {% for ticket in tickets %}
                     <tr>
                         <td>{{ ticket[0] }}</td>
@@ -152,7 +144,6 @@
         function sortBy(column) {
             var tableBody = document.getElementById('ticketTable');
             var rows = Array.from(tableBody.getElementsByTagName('tr'));
-            rows.shift(); // Remove table header row
 
             if (column == 'showtime') {
                 rows.sort(compareShowtimes);
